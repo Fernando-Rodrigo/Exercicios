@@ -2,8 +2,6 @@
 
 sexo = input('Digite o sexo de uma pessoa [M/F]: ').upper()
 
-while sexo != 'M':
-    sexo = input('Digite corretamente o sexo da pessoa!!! Digite o sexo de uma pessoa [M/F]: ').upper()
-while sexo != 'F':
+while sexo != 'M' and sexo != 'F':
     sexo = input('Digite corretamente o sexo da pessoa!!! Digite o sexo de uma pessoa [M/F]: ').upper()
 print('Você digitou corretamente o sexo!')
