@@ -2,11 +2,21 @@
 
 from random import randint
 
-n = int(input('Tente adivinhar um número entre 0 e 10: '))
 r = int(randint(0, 10))
 
-while n != r:
-    print('Não foi desta vez. Tente outra vez.')
-    n = int(input('Tente adivinhar um número entre 0 e 10 novamente: '))
+resultado = False
 
-print('Parabéns, você acertou o número escolhido!')
+cont = 0
+
+while not resultado:
+    n = int(input('Digite seu palpite: '))
+    cont += 1
+
+    if n < r:
+        print('Não foi desta vez. Tente um número maior.')
+    elif n > r:
+        print('Não foi desta vez. Tente um número menor.')
+    else:
+        resultado = True
+
+print('Parabéns, você acertou o número escolhido! Você tentou {} vezes até acertar.'.format(cont))
