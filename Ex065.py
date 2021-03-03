@@ -22,4 +22,5 @@ if num < menor:
     menor = num
 soma += num
 
+print('===' * 10)
 print('O maior número digitado é {},\no menor número digitado é {}\ne a soma entre eles é {}.'.format(maior, menor, soma))
