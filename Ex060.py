@@ -5,7 +5,7 @@ n = 1
 fatorial = 1
 
 while n < numero + 1:
-    fatorial = fatorial * n
+    fatorial *= n
     n += 1
 
 print('O fatorial do número {} é {}'.format(numero, fatorial))
