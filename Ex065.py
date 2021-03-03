@@ -16,4 +16,10 @@ while cont != 'n':
     num = int(input('Digite um novo número: '))
     cont = str(input('Deseja continuar? [s/n]')).lower()
 
+if num > maior:
+    maior = num
+if num < menor:
+    menor = num
+soma += num
+
 print('O maior número digitado é {},\no menor número digitado é {}\ne a soma entre eles é {}.'.format(maior, menor, soma))
