@@ -5,18 +5,19 @@ s = int(input('Digite a razão da progreção: '))
 
 pa = a1
 
-c = 0
-
-while c < 10:
-    pa += s
-    print('O termo {} da PA é {}'.format(c + 1, pa))
-    c += 1
-
-opcao = int(input('Digite [1] para mostrar mais termos ou [0] para encerrar o programa: '))
+c = 1
+opcao = 10
+total = 0
 
 while opcao != 0:
-    pa += s
-    print('O termo {} da PA é {}'.format(c + 1, pa))
-    opcao = int(input('Digite [1] para mostrar mais termos ou [0] para encerrar o programa: '))
+    total += opcao
+    while c <= total:
+        pa += s
+        print('O termo {} da PA é {}'.format(c, pa))
+        c += 1
+    opcao = int(input('Quantos termos a mais você quer que exiba dessa PA? '))
 
+
+print('===' * 25)
+print('A prograssão aritmética tem {} termos!!'.format(total))
 print('Fim do programa!!')
