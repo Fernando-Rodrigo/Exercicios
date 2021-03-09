@@ -7,7 +7,7 @@ cont = 0
 while True:
     NumComp = int(randint(1,10))
     NumJogador = int(input('Digite um valor: '))
-    ParImpar = str(input('Par ou ímpar? [p/i]')).lower().strip()[0]
+    ParImpar = str(input('Par ou ímpar? [p/i] ')).lower().strip()[0]
     parjogador = NumJogador % 2
     
     if ParImpar == 'p':
