@@ -14,6 +14,7 @@ while True:
     
     total += preco
     menorpreco = preco
+    nomem = nome
 
     if preco > 1000:
         quant1000 += 1
