@@ -14,7 +14,7 @@ if sexo == 1:
     idade = date.today().year - ano
     if idade < 18:
         anos = 18 - idade
-        anoalis = ano + 18
+        anoalis = ano + anos
         print('Ainda vai se alistar no serviço militar e falta {} anos para se alistar.'.format(anos))
         print('Deverá se alistar em {}.'.format(anoalis))
     elif idade == 18:
