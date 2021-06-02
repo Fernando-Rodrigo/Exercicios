@@ -2,16 +2,21 @@
 
 expressao = []
 
-count1 = count2 = 0
-
-expressaostr = str(input('Digite a expressão matemática: ')).split()
+expressaostr = str(input('Digite a expressão matemática: '))
 
 # expressao.append(input('Digite a expressão matemática: '))
 
-for i in range (0, len(expressaostr)):
-    if expressaostr[i] == '(':
-        count1 += 1
-    elif expressaostr[i] == ')':
-        count2 += 1
+for i in expressaostr:
+    if i == '(':
+        expressao.append('(')
+    elif i == ')':
+        if len(expressao) > 0:
+            expressao.pop()
+        else:
+            expressao.append(')')
+            break
 
-print(f'{count1}')
+if len(expressao) == 0:
+    print('A expressão digitada é válida!!!')
+else:
+    print('A expressão digitada é inválida!!!')
