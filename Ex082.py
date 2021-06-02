@@ -7,7 +7,7 @@ continuar = ''
 
 while True:
     valores.append(int(input('Entre um valor: ')))
-    continuar = str(input('Deseja continuar? [s/n] '))
+    continuar = str(input('Deseja continuar? [s/n] ')).lower().strip()
     if continuar == 'n':
         break
 
@@ -17,5 +17,6 @@ for i in range (0, len(valores)):
     elif valores[i] % 2 != 0:
         impares.append(valores[i])
 
+print(f'Os valores digitados foram {valores}')
 print(f'Os valores pares digitados foram {pares}')
 print(f'Os valores impares digitados foram {impares}')
