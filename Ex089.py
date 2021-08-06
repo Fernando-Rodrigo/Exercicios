@@ -27,7 +27,7 @@ if opcao == 's':
         print(f'As notas do {aluno} são {notas[1][indice]} e {notas[2][indice]}.')
         sair = str(input('Deseja consultar mais notas? [s/n] ')).lower().strip()
         if sair == 'n':
+            print('Obrigado pela presença!!')
             break
-        print('Obrigado pela presença!!')
 else:
     print('Obrigado pela presença!!')
