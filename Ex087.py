@@ -19,6 +19,13 @@ for j in range(0,3):
         if matriz[j][k]%2 == 0:
             somapares += matriz[j][k]
 
+print()
+print('--' * 30)
+print(f'{matriz[0][0], matriz[0][1], matriz[0][2]}')
+print(f'{matriz[1][0], matriz[1][1], matriz[1][2]}')
+print(f'{matriz[2][0], matriz[2][1], matriz[2][2]}')
+print('--' * 30)
+print()
 print(f'A soma dos valores pares digitados é {somapares}')
 print(f'A somados valores da terceira coluna é {matriz[0][2] + matriz[1][2] + matriz[2][2]}')
 print(f'O maior valor da segunda linha é {maiorvalor}')
