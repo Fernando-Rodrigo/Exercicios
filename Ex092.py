@@ -6,7 +6,7 @@ trabalhador = {}
 datatemp = 0
 
 trabalhador['nome'] = str(input('Digite o nome do trabalhador: '))
-trabalhador['idade'] = date.today().year - int(input('Digite a idade do trablhador: '))
+trabalhador['idade'] = date.today().year - int(input('Digite o ano de nascimento do trablhador: '))
 trabalhador['carteira'] = int(input('Digite o número da carteira de trablho: '))
 
 if trabalhador["carteira"] > 0:
