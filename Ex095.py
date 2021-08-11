@@ -4,8 +4,10 @@ jogador = {}
 listajogadores = []
 temp = []
 cont = ''
+contador = 0
 
 while True: 
+    jogador['codigo'] = contador
     jogador['nome'] = str(input('Digite o nome do jodador: '))
     partidas = int(input('Digite quantas partidas o jogador participou: '))
 
@@ -17,6 +19,7 @@ while True:
     temp.clear()
     listajogadores.append(jogador.copy())
     jogador.clear()
+    contador += 1
     while True:
         cont = str(input('Deseja continuar? [S/N] ')).upper().strip()[0]
         if cont in 'NnSs':
@@ -28,15 +31,19 @@ while True:
 print()
 print('--' * 30)
 for j in listajogadores:
-    print(f'O jogador {j["nome"]} participou de {len(j["gols"])} jogos e fez {j["total"]} gols no total')
+    print(f'O jogador de código {j["codigo"]} e nome {j["nome"]} fez {j["gols"]} gols nas partidas com o total de {j["total"]} ')
 
 while True:
-    nome = str(input('Qual jogador deseja ver o desempenho? '))
-    if nome == j["nome"]:
-        print(f'O jogador {j["nome"]} participou de {len(j["gols"])} partidas.')
-        for i, v in enumerate(j["gols"]):
+    codigo = int(input('Qual o codigo do jogador que deseja ver o desempenho? '))
+    if codigo >= len(listajogadores):
+        print('Jogador inexistente. Tente novamente.')
+    else:
+        print()
+        print('--' * 30)
+        print(f'Dados do jogador {listajogadores[codigo]["nome"]}')
+        for i, v in enumerate(listajogadores[codigo]["gols"]):
             print(f'Na partida {i + 1} o jodador fez {v} gols')
-        print(f'O saldo de gols da temporada é {j["total"]}')
+        print(f'O saldo de gols da temporada é {listajogadores[codigo]["total"]}')
     while True:
         cont = str(input('Deseja ver detalhes de um jogador? [S/N] ')).upper().strip()[0]
         if cont in 'NnSs':
