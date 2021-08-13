@@ -3,32 +3,37 @@
 from time import sleep
 
 def contador(inicio, fim, passo):
-    print()
-    print('--' * 30)
-    for i in range(inicio, fim, passo):
-        print(i)
-        sleep(0.75)
-    print()
-    if fim > inicio or passo < 0:
-        print()
+    if inicio < fim:
+        cont = inicio
         print('--' * 30)
-        for i in range(inicio, fim, -passo):
-            print(i)
-            sleep(0.75)
-        print()
+        while cont <= fim:
+            print(f'{cont}', end=' ', flush=True)
+            sleep(0.5)
+            cont += passo
+        print('Fim!!')
+    else:
+        cont = inicio
+        print('--' * 30)
+        while cont >= fim:
+            print(f'{cont}', end=' ', flush=True)
+            sleep(0.5)
+            cont -= passo
+        print('Fim!!')
+    print('--' * 30)
 
-
+print('   =>CONTADOR<=')
 
 contador(1, 10, 1)
-contador(10, 0, -2)
+contador(10, 0, 2)
 
-i = int(input('Digite o valor inicial: '))
-f = int(input('Digite o valor final: '))
+i = int(input('Digite o inicio: '))
+f = int(input('Digite o fim: '))
 p = int(input('Digite o passo: '))
 
 if p == 0:
     contador(i, f, 1)
-    if f < i:
-        contador(i, f, -1)
+elif p < 0:
+    p *= -1
+    contador(i, f, p)
 else:
     contador(i, f, p)
