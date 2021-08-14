@@ -11,14 +11,13 @@ def fatorial(num = 1, show = False):
     fatorial = 1
     for c in range(num, 0, -1):
         fatorial *= c
-    if show == True:
-        print()
-        print('Mostrando passo a passo o cálculo de fatorial.')
-        print('--' * 30)
-        for c in range(num, 0 , -1):
-            print(f'{c}', end=' ', flush=True)
-            sleep(0.5)
-        print(f'= {fatorial}')
+        if show == True:
+            if c > 1:
+                print(f'{c} x', end=' ', flush=True)
+                sleep(0.5)
+            else:
+                print(f'{c} = {fatorial}', end=' ', flush=True)
+                sleep(0.5)
     print()
     print('--' * 30)
     print(f'O fatorial do número {num} é {fatorial}')
