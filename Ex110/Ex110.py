@@ -5,4 +5,4 @@ from moeda import resumo
 valor = float(input('Digite um valor monetário: R$'))
 taxa = float(input('Digite a taxa: '))
 
-print(resumo(valor, taxa))
+resumo(valor, taxa)
