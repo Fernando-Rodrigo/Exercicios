@@ -1,15 +1,15 @@
-def resumo(valor):
-    return f'\nO valor inserido é R${moeda(valor)}\nCom aumento de 20% fica R${aumentar(valor)}\nCom 30% desconto fica R${diminuir(valor)}\nO dobro é R${dobro(valor)}\nA metade é R${metade(valor)}'
+def resumo(valor, taxa):
+    return f'\nO valor inserido é R${moeda(valor)}\nCom aumento de {moeda(taxa)}% fica R${aumentar(valor, taxa)}\nCom {moeda(taxa)}% desconto fica R${diminuir(valor, taxa)}\nO dobro é R${dobro(valor)}\nA metade é R${metade(valor)}'
 
 
-def aumentar(valor):
-    resultado = valor + valor * 0.2
+def aumentar(valor, taxa):
+    resultado = valor + (valor * (taxa / 100))
     return moeda(resultado)
 
 
 
-def diminuir(valor):
-    resultado = valor - valor * 0.3
+def diminuir(valor, taxa):
+    resultado = valor - (valor * (taxa / 100))
     return moeda(resultado)
 
 

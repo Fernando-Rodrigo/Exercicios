@@ -1,9 +1,9 @@
-def aumentar(valor):
-    return valor + valor * 0.2
+def aumentar(valor, taxa):
+    return valor + (valor * (taxa/100))
 
 
-def diminuir(valor):
-    return valor - valor * 0.3
+def diminuir(valor, taxa):
+    return valor - (valor * (taxa / 100))
 
 
 def dobro(valor):

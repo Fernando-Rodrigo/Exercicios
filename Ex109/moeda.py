@@ -1,13 +1,13 @@
-def aumentar(valor, formatar=False):
-    resultado = valor + valor * 0.2
+def aumentar(valor, taxa, formatar=False):
+    resultado = valor + (valor * (taxa / 100))
     if formatar == True:
         return moeda(resultado)
     else:
         return resultado
 
 
-def diminuir(valor, formatar=False):
-    resultado = valor - valor * 0.3
+def diminuir(valor, taxa, formatar=False):
+    resultado = valor - (valor * (taxa / 100))
     if formatar == True:
         return moeda(resultado)
     else:
