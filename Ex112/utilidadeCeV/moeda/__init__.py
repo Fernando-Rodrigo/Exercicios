@@ -1,5 +1,14 @@
 def resumo(valor, taxa):
-    return f'\nO valor inserido é {moeda(valor)}\nCom aumento de {taxa}% fica {aumentar(valor, taxa)}\nCom {taxa}% desconto fica {diminuir(valor, taxa)}\nO dobro é {dobro(valor)}\nA metade é {metade(valor)}'
+    """
+    _>Função que recebe o valor monetário e a taxa para cálculo de desconto, aumento, metade e dobro do valor.
+    :param valor: Valor monetário
+    :param taxa: Valor da taxa para cálculo do desconto e aumento
+    """
+    print(f'O valor inserido é {moeda(valor)}')
+    print(f'Com aumento de {taxa :.2f}% fica {aumentar(valor, taxa)}')
+    print(f'Com {taxa :.2f}% desconto fica {diminuir(valor, taxa)}')
+    print(f'O dobro é {dobro(valor)}')
+    print(f'A metade é {metade(valor)}')
 
 
 def aumentar(valor, taxa):
