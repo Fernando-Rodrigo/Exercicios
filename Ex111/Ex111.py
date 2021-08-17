@@ -5,4 +5,4 @@ from utilidadeCeV import moeda
 valor = float(input('Digite um valor monetário: R$'))
 taxa = float(input('Digite a taxa: '))
 
-print(moeda.resumo(valor, taxa))
+moeda.resumo(valor, taxa)
