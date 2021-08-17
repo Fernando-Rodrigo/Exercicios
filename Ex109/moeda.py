@@ -30,5 +30,5 @@ def metade(valor, formatar=False):
         return resultado
 
 
-def moeda(valor):
-    return f'{valor :.2f}'
+def moeda(valor, moeda='R$'):
+    return f'{moeda}{valor :.2f}'.replace('.', ',')

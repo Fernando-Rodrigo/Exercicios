@@ -5,7 +5,7 @@ import moeda
 valor = float(input('Digite um valor monetário: R$'))
 taxa = float(input('Digite a taxa: '))
 
-print(f'O valor R${moeda.moeda(valor)} com {moeda.moeda(taxa)}% de aumento é R${moeda.aumentar(valor, taxa, True)}')
-print(f'O valor R${moeda.moeda(valor)} com {moeda.moeda(taxa)}% de desconto é R${moeda.diminuir(valor, taxa, True)}')
+print(f'O valor R${moeda.moeda(valor)} com {taxa}% de aumento é R${moeda.aumentar(valor, taxa, True)}')
+print(f'O valor R${moeda.moeda(valor)} com {taxa}% de desconto é R${moeda.diminuir(valor, taxa, True)}')
 print(f'O dobro do valor R${moeda.moeda(valor)} é R${moeda.dobro(valor, True)}')
 print(f'A metade do valor R${moeda.moeda(valor)} é R${moeda.metade(valor, True)}')
