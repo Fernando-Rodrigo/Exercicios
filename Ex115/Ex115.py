@@ -14,9 +14,9 @@ while True:
     print('--' * len(menu))
     opcao = int(input('Qual a opção desejada? '))
     if opcao == 1:
-        nome = str(input('Nome: '))
-        idade = int(input('Idade: '))
-        cadastrar.cadastro(nome, idade)
+        cadastrar.cadastro()
+    if opcao == 2:
+        listar.listar()
     if opcao == 3:
         print('Volte sempre!')
         break
