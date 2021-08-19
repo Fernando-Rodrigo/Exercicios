@@ -2,6 +2,7 @@
 
 from sys import stdout
 from ctypes import windll
+from typing import Type
 
 def leiaInt(num=0):
     valor = 0
@@ -9,17 +10,24 @@ def leiaInt(num=0):
     color = [4]
     texto = 'Você deve digitar somente número inteiro'
     std_out_handle = windll.kernel32.GetStdHandle(-11)
+    
     while True:
         try:
+            windll.kernel32.SetConsoleTextAttribute(std_out_handle, 7)
             valor = int(input(num))
             validade = True
-        except:
+        except (ValueError, TypeError):
             for i in range(0, len(color)):
                 windll.kernel32.SetConsoleTextAttribute(std_out_handle, color[i])
                 stdout.write(texto)
                 print('')
             # cor padrão é 7, white
             windll.kernel32.SetConsoleTextAttribute(std_out_handle, 4)
+        except(KeyboardInterrupt):
+            windll.kernel32.SetConsoleTextAttribute(std_out_handle, 4)
+            print('O usuário não inseriu número!')
+            valor = 0
+            validade = True
         windll.kernel32.SetConsoleTextAttribute(std_out_handle, 7)
         if validade == True:
             break
@@ -34,15 +42,21 @@ def leiaFloat(num):
     std_out_handle = windll.kernel32.GetStdHandle(-11)
     while True:
         try:
+            windll.kernel32.SetConsoleTextAttribute(std_out_handle, 7)
             valor = float(input(num).replace(',', '.'))
             validade = True
-        except:
+        except (ValueError, TypeError):
             for i in range(0, len(color)):
                 windll.kernel32.SetConsoleTextAttribute(std_out_handle, color[i])
                 stdout.write(texto)
                 print('')
             # cor padrão é 7, white
             windll.kernel32.SetConsoleTextAttribute(std_out_handle, 4)
+        except(KeyboardInterrupt):
+            windll.kernel32.SetConsoleTextAttribute(std_out_handle, 4)
+            print('O usuário não inseriu número!')
+            valor = 0
+            validade = True
         windll.kernel32.SetConsoleTextAttribute(std_out_handle, 7)
         if validade == True:
             break
