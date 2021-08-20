@@ -1,10 +1,18 @@
+from ctypes import windll
+
+def cor(numcor):
+    std_out_handle = windll.kernel32.GetStdHandle(-11)
+    windll.kernel32.SetConsoleTextAttribute(std_out_handle, numcor)
+
 def leiaInt(msg):
     while True:
         try:
+            cor(1)
             n = int(input(msg))
             return n
             break
         except(ValueError, TypeError):
+            cor(4)
             print('Digite somente valores inteiros')
 
 
