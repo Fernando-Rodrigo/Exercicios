@@ -1,3 +1,6 @@
-Carlos;31
-José;21
-Ana;12
+Gustavo;21
+Ana;32
+Carlos;45
+Ana;34
+Fernando;19
+Maria;21

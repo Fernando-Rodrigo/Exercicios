@@ -11,9 +11,13 @@ while True:
     cor(2)
     opcao = menu(['Cadastrar', 'Listar', 'Sair'])
     if opcao == 1:
-        cabecalho('Cadastrar')
+        #Opção para cadastrar uma nova pessoa no arquivo
+        cabecalho('Novo cadastro')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arq, nome, idade)
     elif opcao == 2:
-        #Leitura de arquivo
+        #Opção para acessar e ler o conteúdo do arquivo
         lerArquivo(arq)
     elif opcao == 3:
         cor(11)
