@@ -1,5 +1,11 @@
 from lib.interface import *
+from lib.arquivo import *
 from time import sleep
+
+arq = './Ex115/cadastro.txt'
+
+if not arquivoExiste(arq):
+    criarArquivo(arq)
 
 while True:
     cor(2)
@@ -7,7 +13,8 @@ while True:
     if opcao == 1:
         cabecalho('Cadastrar')
     elif opcao == 2:
-        cabecalho('Listar')
+        #Leitura de arquivo
+        lerArquivo(arq)
     elif opcao == 3:
         cor(11)
         print()
